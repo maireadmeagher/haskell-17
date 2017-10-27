@@ -120,8 +120,8 @@ body
   </header>
   <div class="right tab-menu menu">
     
-    <a class="item" data-tab="Lab-03">
-      Lab-03
+    <a class="item" data-tab="Lab-02">
+      Lab-02
     </a>
     
     <a class="item" data-tab="01">
@@ -148,22 +148,6 @@ body
       06
     </a>
     
-    <a class="item" data-tab="07">
-      07
-    </a>
-    
-    <a class="item" data-tab="08">
-      08
-    </a>
-    
-    <a class="item" data-tab="09">
-      09
-    </a>
-    
-    <a class="item" data-tab="Exercises">
-      Exercises
-    </a>
-    
     <div class="item">
       
     </div>
@@ -174,14 +158,8 @@ body
   <div class="ui inverted labeled icon left inline vertical sidebar menu">
     
       
-        <a class="item" href="../../topic02-first-steps/book/index.html">
-          Lab-02
-        </a>
-      
-    
-      
         <a class="item" href="../../topic03-types-and-classes/book/index.html">
-          Lab-03
+          Lab-02
         </a>
       
     
@@ -190,458 +168,282 @@ body
     <div class="ui basic segment" id="labchat">
       <br>
       
-      <div  class="ui tab segment lab" data-tab="Lab-03">
-        <h1>Objectives</h1>
-<p>On completion of this lab you should:</p>
-<ul>
-<li><p>be familiar with the PDE (Processing Development Environment).</p>
-</li>
-<li><p>be able to use methods to draw basic shapes and add colour to these shapes.</p>
-</li>
-</ul>
+      <div  class="ui tab segment lab" data-tab="Lab-02">
+        <h1>Getting Started with GHCi</h1>
+<p>Installing and using GHCi</p>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="01">
-        <h1>Lab advice</h1>
+        <h1>Objectives</h1>
+<p>On completion of this lab you should:</p>
 <ul>
-<li><p>Your labs are not a race to be the first student finished.</p>
+<li><p>have GHC complier and interpreter installed on your laptop.</p>
 </li>
-<li><p>It is very important that you:</p>
-<ul>
-<li>take your time.</li>
-<li>read the instructions carefully.</li>
-<li>ask your lecturer to explain concepts that you don&#39;t understand; that is what we are here for!</li>
-<li>attend &#39;&#39;ALL&#39;&#39; your classes; attendance will be taken.</li>
-</ul>
+<li><p>be able to use the GHCi interpreter to test simple examples. </p>
 </li>
-<li><p>Where code is given in labs, don&#39;t cut and paste it; maximise your learning by typing the code in.</p>
+<li><p>be able to run simple Haskell scripts using the GHCI interface.</p>
 </li>
 </ul>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="02">
-        <h1>Installing the PDE (Processing Development Environment)</h1>
+        <h1>Useful links</h1>
 <ul>
-<li>If you are using your own laptop and would like to install the PDE on it, please follow the instructions in this step.</li>
-<li>If you are using the WIT computers, you can ignore this step and move onto the next step.</li>
+<li><p>There are many great resources out there for Learning Haskell:</p>
+<ul>
+<li>This link is excellent - <a href="https://wiki.haskell.org/Learning_Haskell">https://wiki.haskell.org/Learning_Haskell</a> - it includes a list of textbooks, on-line tutorials etc. </li>
 </ul>
-<h2>Downloading the PDE</h2>
 <ul>
-<li>The PDE can be downloaded from <a href="https://processing.org/">https://processing.org/</a>.  It is free, but you can choose to make a donation if you wish.</li>
+<li><p>The textbook for this course is &#39;Programming in Haskell&#39;, Graham Hutton, Cambridge University Press, ISBN ISBN 978-1316626221. See 
+<a href="http://www.cs.nott.ac.uk/~pszgmh/pih.html"><img src="./img/03.png" alt="Programming in Haskell"> </a> </p>
+</li>
+<li><p>Another useful text:</p>
+<ul>
+<li>Learn you a Haskell For Great Good  - Available online for free.
+<a href="http://learnyouahaskell.com/"><img src="./img/02.png" alt="Learn you a Haskell For Great Good"></a></li>
 </ul>
-<p><img src="./img/01.png" alt="The processing website"></p>
+</li>
+<li><p>OnLine Courses:</p>
 <ul>
-<li>Choose the version of the </li>
-</ul>
-<p><img src="./img/02.png" alt="Choose based on your operating system"></p>
-<ul>
-<li>A zip file will start to download.  When this file has downloaded:<ul>
-<li>Decide where you are going to store your Programming applications on your computer.   It is a good idea to create a folder called <strong>dev</strong> on your <strong>C:\</strong> and store all your applications in there.</li>
-<li>Unzip the downloaded processing file to your chosen location.  Note: if you don’t have unzipping software, 7-zip is a good choice and can be downloaded from here: <a href="http://www.7-zip.org/">http://www.7-zip.org/</a>.</li>
-<li>You should now have a folder structure resembling this picture:</li>
+<li>&#39;Functional Programming in Haskell&#39; - University of Glagow, FutureLearn</li>
+<li>&#39;Functional Programming Principles in Scala&#39; - Martin Odersky, Coursera. This is a very good course for the principles of Functional Programming. Good structured exercises and allows you time to define from first principles. (Wrong language, right course!)</li>
+<li>Loads of courses online!!</li>
 </ul>
 </li>
 </ul>
-<p><img src="./img/03.png" alt="The Processing application"></p>
+</li>
+</ul>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="03">
-        <h1>Opening the PDE (Processing Development Environment)</h1>
+        <h1>Installing GHC (Glasgow Haskell Compiler)</h1>
 <ul>
-<li>Open Windows Explorer by holding down the windows key and pressing the letter E once. </li>
-<li>When Windows Explorer opens, double click on:<ul>
-<li>the <strong>C:</strong> </li>
-<li>then the <strong>dev</strong> folder</li>
-<li>then the <strong>processing</strong> folder</li>
-<li>then the <strong>processing-2.2.1</strong> folder</li>
+<li>I am assuming that you are installing GHC on your own laptop.</li>
 </ul>
+<h2>Downloading and installing GHC</h2>
+<ul>
+<li><p>GHC inludes a compiler and an interpreter (GHCi). </p>
+</li>
+<li><p>The environment  can be downloaded from <a href="https://www.haskell.org/ghc/">https://www.haskell.org/ghc/</a>.  </p>
+</li>
+<li><p>OS-specific packages can be easier to use - see <a href="https://www.haskell.org/ghc/distribution_packages.html">https://www.haskell.org/ghc/distribution_packages.html</a></p>
 </li>
 </ul>
-<p>You should see a list of files and folders similiar to the picture below:</p>
-<p><img src="./img/04.png" alt="Processing Development Environment files"></p>
-<p>Double click in the <strong>processing</strong> application (highlighted by the red rectangle).</p>
-<p>The PDE (Processing Development Environment) should launch.</p>
-<p><img src="./img/05.png" alt="The Processing Development Environment"></p>
+<p><img src="./img/01.png" alt="Choose based on your operating system"></p>
+<ul>
+<li><p>Install the package.</p>
+</li>
+<li><p>Run the interpreter (GHCi) by simply typing ghci from terminal or running the GHCi app.</p>
+</li>
+</ul>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="04">
-        <h1>Setting your Sketchbook location</h1>
+        <h1>Running simple Haskell programs</h1>
 <ul>
-<li>As you work through the exercises in this lab, you will create many new files.  These files are called Sketchbooks.</li>
-<li>It is important that you pick a convenient location on your computer to save these sketchbook files to.  The following steps show you how to do this.</li>
+<li>We can execute small simple programs using GHCi (i for interactive) alone. </li>
+<li>To practice this, firstly run the GHCi interpreter (as per previous page). A prompt is displayed &gt; </li>
+<li>Use GHCi to evaluate the following: </li>
 </ul>
-<h2>Updating your Sketchbook location</h2>
-<ul>
-<li>If you don&#39;t have Processing open, launch it (see the previous step for the steps involved).</li>
-<li>From the <strong>File</strong>  menu, select the <strong>Preferences</strong> menu item.</li>
-</ul>
-<p><img src="./img/06.png" alt="Selecting the Preferences menu item"></p>
-<ul>
-<li>The following window should appear.</li>
-</ul>
-<p><img src="./img/07.png" alt="Enter a new sketchbook location"></p>
-<ul>
-<li>In the <strong>Sketchbook location</strong>, enter a location that is convenient to you.  If you are using:<ul>
-<li>the college computers, it could be your G:\ (personal networked drive that is accessible only using college computers) or a USB drive (remember to back up your work if you are using a portable drive).</li>
-<li>your own laptop, choose a convenient location where you will store all your programming exercises.</li>
-</ul>
-</li>
-<li>Click the OK button.</li>
-</ul>
-<h2>The Sketchbook location</h2>
-<ul>
-<li>All your work can now be accessed easily by selecting the <strong>Sketchbook</strong>  option from the <strong>File</strong> menu. An example of previous Sketchbook work could look like this:</li>
-</ul>
-<p><img src="./img/08.png" alt="Example of a Sketchbook containing previous work"></p>
+<h2>Exercise 1</h2>
+<pre><code>2+3</code></pre>
+<h2>Exercise 2</h2>
+<pre><code>2*3</code></pre>
+<h2>Exercise 3</h2>
+<p><code>div</code> is the infix integer division operator (note the quotes character - backward quote)</p>
+<pre><code>7 `div` 2</code></pre>
+<h2>Exercise 4</h2>
+<p>Select the first element of a non-empty list:</p>
+<pre><code>head [1,2,3,4,5]</code></pre>
+<h2>Exercise 5</h2>
+<p>Remove the first elemenet of a non-empty list: </p>
+<pre><code>tail [1,2,3,4,5]</code></pre>
+<h2>Exercise 6</h2>
+<p>Select the first n elements of a list: </p>
+<pre><code>take 3  [1,2,3,4,5]</code></pre>
+<h2>Exercise 7</h2>
+<p>Remove the first n elements of a list: </p>
+<pre><code>drop 3  [1,2,3,4,5]</code></pre>
+<h2>Exercise 8</h2>
+<p>Select the nth element of a list (from index 0): </p>
+<pre><code>[1,2,3,4,5] !! 3</code></pre>
+<h2>Exercise 9</h2>
+<p>Calculate the length of a list:</p>
+<pre><code>length [1,2,3,4,5]</code></pre>
+<h2>Exercise 10</h2>
+<p>Calculate the sum of a list:</p>
+<pre><code>sum [1,2,3,4,5]</code></pre>
+<h2>Exercise 11</h2>
+<p>Calculate the product of a list:</p>
+<pre><code>product [1,2,3,4,5]</code></pre>
+<h2>Exercise 12</h2>
+<p>Append two lists:</p>
+<pre><code>[1,2,3,4,5]  ++ [4,6,7,8]</code></pre>
+<h2>Exercise 13</h2>
+<p>Calculate the reverse of a list:</p>
+<pre><code>reverse [1,2,3,4,5]</code></pre>
+<h2>Exercise 14</h2>
+<p>Prepend an element to a  list:</p>
+<pre><code>1: [2,3,4,5]</code></pre>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="05">
-        <h1>Drawing Simple Shapes</h1>
+        <h1>Using GHC</h1>
 <ul>
-<li>We will use the following built-in functions to draw simple shapes:<ul>
-<li>rect()</li>
-<li>line()</li>
-<li>ellipse()</li>
+<li>To load compiled code. </li>
+<li>Using the terminal, cd to your working directory. (this just makes the loading simpler)</li>
+<li>Create a simple Haskell script:</li>
 </ul>
+<pre><code> main = print (fac 20)
+
+fac 0 = 1
+fac n = n * fac (n-1)</code></pre>
+<p>Call it, e.g.  &#39;Main.hs&#39;</p>
+<ul>
+<li><p><img src="./img/05.png" alt="load the script (Main.hs) "></p>
+<ul>
+<li><p>This compiles it as well as loading it.  You can now call the fac function: </p>
+</li>
+<li><p><img src="./img/06.png" alt="run the fac function "></p>
+</li>
+<li><p>You can also call the main function:
+<img src="./img/08.png" alt="run the main function "></p>
 </li>
 </ul>
-<h2>Drawing Rectangles</h2>
-<ul>
-<li>The syntax of the <strong>rect</strong> function is:</li>
-</ul>
-<pre><code>    rect(x, y, w, h)
-        x = x-coordinate of the upper left corner of the rectangle
-        y = y-coordinate of the upper left corner of the rectangle
-        w = width of the rectangle
-        h = height of the rectangle</code></pre>
-<ul>
-<li>Note that, in computing, the coordinates start in the top left hand corner i.e. (0,0) is in the top left of the screen.  In the following picture, you can see the coordinates of the rectangle (1,2) along with its width (4) and height (3). </li>
-</ul>
-<p><img src="./img/09.png" alt="Rectangle example from www.processing.org"></p>
-<ul>
-<li>Enter the following code in your sketchbook:</li>
-</ul>
-<pre><code>    rect(20,30,50,30);</code></pre>
-<ul>
-<li>Run the code, by clicking on the <strong>play</strong> button (highlighted in red in the screen shot below):</li>
-</ul>
-<p><img src="./img/11.png" alt="Running code - click on the play button"></p>
-<ul>
-<li>The following window should appear with a rectangle that:<ul>
-<li>starts at the (x,y) coordinates (20,30) [measured in pixels]</li>
-<li>has a width of 50 pixels</li>
-<li>has a height of 30 pixels</li>
-</ul>
+<p>If you make any changes to the script, you need to reload it (thus recompiling it) : </p>
 </li>
 </ul>
-<p><img src="./img/12.png" alt="Rectangle"></p>
-<h2>Drawing Squares</h2>
 <ul>
-<li><p>Using the rect() function, you can draw squares. Just set the width and height to the same number of pixels.</p>
+<li><p><img src="./img/07.png" alt="reload the script "></p>
 </li>
-<li><p>Below the code you wrote previously, try drawing a square that has starts at the (x,y) coordinates of (40,5) and has a length of 20.  </p>
+<li><p>A list of GHCi commands is available at <a href="https://downloads.haskell.org/~ghc/7.4.1/docs/html/users_guide/ghci-commands.html">https://downloads.haskell.org/~ghc/7.4.1/docs/html/users_guide/ghci-commands.html</a></p>
 </li>
-<li><p>Run the code.  Did a square appear?</p>
+<li><p>When you need to use a terminal command, just use :! as in 
+  <img src="./img/09.png" alt="Where am I? "></p>
 </li>
 </ul>
-<p><img src="./img/13.png" alt="Rectangle and square"></p>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="06">
-        <h1>Drawing Simple Shapes(contd.)</h1>
+        <h1>Naming Values Worksheet</h1>
 <ul>
-<li>Using rect(), line() and ellipse().</li>
-</ul>
-<h2>Drawing Lines</h2>
+<li>The purpose of this worksheet is for you to work through the worksheet. </li>
+<li>Copy and paste  the code into a .hs script. </li>
+<li>Load this script into GHCi. </li>
+<li>Go through the code, section by section.</li>
+<li><p>For example, for the first code snippet, replace the </p>
+<pre><code>pie = undefined</code></pre>
+<p>with </p>
+<pre><code>pie = 3.1416</code></pre>
+</li>
+<li><p>At each stage, test your change by </p>
 <ul>
-<li>The syntax of the <strong>line</strong> function is:</li>
+<li>reloading script</li>
+<li>testing values : e.g. for first snippet, simply type <pre><code>&gt; pie</code></pre>
+</li>
 </ul>
-<pre><code>    line(x1, y1, x2, y2)
-        x1 = x-coordinate of first point
-        y1 = y-coordinate of first point
-        x2 = x-coordinate of second point
-        y2 = y-coordinate of second point</code></pre>
-<ul>
-<li>In the following picture, you can see an example of a line. </li>
+</li>
+<li>You should expect to get back the new value of pie.</li>
 </ul>
-<p><img src="./img/14.png" alt="Line example from www.processing.org"></p>
-<ul>
-<li>Enter the following code in your open sketchbook:</li>
-</ul>
-<pre><code>    line(5,30,20,90);</code></pre>
-<ul>
-<li>When you run the code, you should see the following line that starts at (5,30) and ends at (20,90):</li>
-</ul>
-<p><img src="./img/15.png" alt="Drawing a line"></p>
+<pre><code>--- Naming Values worksheet
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="07">
-        <h1>Drawing Simple Shapes(contd.)</h1>
-<ul>
-<li>Using rect(), line() and ellipse().</li>
-</ul>
-<h2>Drawing Ellipses</h2>
-<ul>
-<li><p>For our purposes here, we will define an <strong>ellipse</strong> as a basic oval shape. </p>
-</li>
-<li><p>The syntax of the <strong>ellipse</strong> function is:</p>
-</li>
-</ul>
-<pre><code>    ellipse(x, y, w, h)
-        x = x-coordinate at the centre of the ellipse
-        y = y-coordinate at the centre of the ellipse
-        w = width of the ellipse
-        h = height of the ellipse</code></pre>
-<ul>
-<li>In the following picture, you can see an example of an ellipse. </li>
-</ul>
-<p><img src="./img/16.png" alt="Ellipse example from www.processing.org"></p>
-<ul>
-<li>Enter the following code in your open sketchbook:</li>
-</ul>
-<pre><code>    ellipse(85,50,20,60);</code></pre>
-<ul>
-<li>When you run the code, you should see the following ellipse whose centre is (85,50) and is 20 pixels wide and 90 high.</li>
-</ul>
-<p><img src="./img/17.png" alt="Drawing an ellipse"></p>
-<h2>Drawing Circles</h2>
-<ul>
-<li><p>Using the ellipse() function, you can draw circles. Just set the width and height to the same number of pixels.</p>
-</li>
-<li><p>Try drawing a cicle that has the coordinates (50,80) at its centre and has a diameter of 15 pixels.</p>
-</li>
-<li><p>Run the code.  Did a circle appear?</p>
-</li>
-</ul>
-<p><img src="./img/18.png" alt="Drawing a circle"></p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="08">
-        <h1>Changing the look of the display window</h1>
-<ul>
-<li>You should have the following code in your open sketchbook:</li>
-</ul>
-<pre><code>    rect(20,30,50,30);
-    rect(40,5,20,20);
-    line(5,30,20,90);
-    ellipse(85,50,20,60);
-    ellipse(50,80,15,15);</code></pre>
-<ul>
-<li>When it runs, you should have something that looks like this:</li>
-</ul>
-<p><img src="./img/18.png" alt="Output so far"></p>
-<ul>
-<li>We can see that the available space in the window is at a minimum and the window is quite small.  There is also no added colour.  We will make changes to this code to make the window larger and add colour.</li>
-</ul>
-<h2>size() function</h2>
-<ul>
-<li><p>The size() function sets the size of the display window in pixels.  It has to be the first line of code in your sketchbook (there is an exception to this that we will cover later).  </p>
-</li>
-<li><p>The syntax of the <strong>size</strong> function is:</p>
-</li>
-</ul>
-<pre><code>    size(w, h)
-        w = width of the ellipse
-        h = height of the ellipse</code></pre>
-<ul>
-<li><p>If the size function is not called, the window will be set to a default size of 100x100 pixels.</p>
-</li>
-<li><p>Enter the following code in your open sketchbook:</p>
-</li>
-</ul>
-<pre><code>    size(400,300);</code></pre>
-<ul>
-<li>Run your code; your window should now be larger.</li>
-</ul>
-<h2>background() function</h2>
-<ul>
-<li><p>The background() function sets the background colour of the display window. </p>
-</li>
-<li><p>The syntax of the <strong>background</strong> function is:</p>
-</li>
-</ul>
-<pre><code>    background(r,g,b)
-        r = red colour   (a number between 0 and 255 inclusive)
-        g = green colour (a number between 0 and 255 inclusive)
-        b = blue colour  (a number between 0 and 255 inclusive)</code></pre>
-<ul>
-<li><p>The background function uses a combination of RGB (red, green and blue) values to display a colour on the window.  </p>
-</li>
-<li><p>Visit the following website and choose a colour you like:</p>
-</li>
-</ul>
-<p><a href="https://color.adobe.com/create/color-wheel/" target="_blank">Adobe Colour Wheel Site</a>  </p>
-<ul>
-<li><p>In your open sketchbook (after the size() function), type in the background() function, passing the RGB values for your selected colour as parameters.</p>
-</li>
-<li><p>For example, we chose a light blue:  </p>
-</li>
-</ul>
-<pre><code>    background(190,240,245);</code></pre>
-<p><img src="./img/19.png" alt="Setting the size and colour of the display window"></p>
+------------------------------------------------
+-- pi is a real number which is approximately
+-- three and 1,416 ten thousandths. Define a Double
+-- with this approximate value.
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="09">
-        <h1>Changing the look of the shapes</h1>
-<ul>
-<li>You should have the following code (or something similar) in your open sketchbook:</li>
-</ul>
-<pre><code>    size(400,300);
-    background(190,240,245); 
-    rect(20,30,50,30);
-    rect(40,5,20,20);
-    line(5,30,20,90);
-    ellipse(85,50,20,60);
-    ellipse(50,80,15,15);</code></pre>
-<ul>
-<li>When it runs, you should have something that looks like this:</li>
-</ul>
-<p><img src="./img/19.png" alt="Output so far"></p>
-<ul>
-<li>Change the coordinates of your shapes and the size of your rectangle so that your output is similar to the following screen shot:</li>
-</ul>
-<p><img src="./img/20.png" alt="Shapes moved and resized"></p>
-<h2>fill() function</h2>
-<ul>
-<li><p>The fill() function fills shapes with a chosen colour.  We will use the RGB colours to select a colour.  All shapes that are drawn after the <strong>fill</strong> function is called, will be filled with the chosen colour.  </p>
-</li>
-<li><p>The syntax of the <strong>fill</strong> function is similar to the <strong>background</strong> function and is:</p>
-</li>
-</ul>
-<pre><code>    fill(r,g,b)
-        r = red colour (a whole number between 0 and 255 inclusive)
-        g = green colour (a whole number between 0 and 255 inclusive)
-        b = blue colour (a whole number between 0 and 255 inclusive)</code></pre>
-<ul>
-<li>In your open sketchbook, enter the following code before your draw any shapes:</li>
-</ul>
-<pre><code>    fill(100,150,70);</code></pre>
-<ul>
-<li><p>Run your code; all your shapes should be coloured dark green.</p>
-</li>
-<li><p>Now we will set the ellipses to be a different colour i.e. light green.  Enter the following code before your first ellipse() function call.</p>
-</li>
-</ul>
-<pre><code>    fill(200,250,70);</code></pre>
-<h2>Order of statements matter</h2>
-<ul>
-<li>Note how the order of statements matter.  All shapes drawn after the first fill() function is called are coloured dark green.  All shapes drawn after the second fill() function is called are coloured light green (see picture below):</li>
-</ul>
-<p><img src="./img/21.png" alt="Shapes filled with different colours"></p>
-<ul>
-<li><p>Try moving the first ellipse() function call <strong>before</strong> the second fill() function call.  What happened?  Only the second ellipse is coloured light green.   </p>
-</li>
-<li><p>Move the ellipse function back to it&#39;s original location so both ellipses are coloured light green.</p>
-</li>
-</ul>
-<h2>noStroke() function</h2>
-<ul>
-<li><p>A <strong>stroke</strong> is the outline of a shape.  The noStroke() function disables the outline on shapes that are drawn after the function is called.  </p>
-</li>
-<li><p>In your open sketchbook, enter the following code before your draw any shapes:</p>
-</li>
-</ul>
-<pre><code>    noStroke();</code></pre>
-<ul>
-<li>When you run your code, you should have something similar to this:</li>
-</ul>
-<p><img src="./img/22.png" alt="Shapes filled, but with no stroke"></p>
-<h2>stroke() function</h2>
-<ul>
-<li><p>The stroke() function enables the outline on shapes that are drawn after the function is called.  When you call stroke(), you need to specify a colour.</p>
-</li>
-<li><p>The syntax of the <strong>stroke</strong> function is also similar to the <strong>fill</strong> and <strong>background</strong> function and is:</p>
-</li>
-</ul>
-<pre><code>    stroke(r,g,b)
-        r = red colour (a whole number between 0 and 255 inclusive)
-        g = green colour (a whole number between 0 and 255 inclusive)
-        b = blue colour (a whole number between 0 and 255 inclusive)</code></pre>
-<ul>
-<li><p>If we wanted <strong>all</strong> shapes <strong>except</strong> the first ellipse (the oval) to have a stroke, you should make the following changes:</p>
-<ul>
-<li>remove the call to noStroke() that you put into your code in the previous step.</li>
-<li>call noStroke() before the first ellipse is drawn.</li>
-<li>call stroke(0,0,0) before the second ellipse is drawn to enable a black stroke on the second ellipse.</li>
-</ul>
-</li>
-<li><p>Your output should look similar to this:</p>
-</li>
-</ul>
-<p><img src="./img/23.png" alt="Shapes filled - noStroke on the oval"></p>
-<h2>strokeWeight() function</h2>
-<ul>
-<li><p>The strokeWeight() function allows you to choose the thickness of a line/outline on shapes.  The chosen thickness will apply to all lines/shapes that are drawn after the function is called.  The thickness is specified in pixels and the default thickness is 1 pixel.</p>
-</li>
-<li><p>If we wanted <strong>all</strong> shapes to have thickness of 3 pixels, enter the following code before you draw any shapes:</p>
-</li>
-</ul>
-<pre><code>    strokeWeight(3);</code></pre>
-<ul>
-<li>Your output should look similar to this:</li>
-</ul>
-<p><img src="./img/24.png" alt="Playing with stroke weight"></p>
+pie:: Double               -- Mis-spelling deliberate
+pie = undefined
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Exercises">
-        <h1>Exercises</h1>
-<ul>
-<li>The exercises are typically based on the functions we covered in the previous steps in this lab.</li>
-<li>For each exercise listed below, open a new sketchbook.</li>
-<li>For the <strong>challenge exercises</strong> you may need to visit the <a href="https://processing.org/reference/">Processing website</a> for additional information.</li>
-<li>When you are finished all your exercises, zip all your exercises into one file and upload them into <strong>lab01</strong> dropbox in Moodle.</li>
-</ul>
-<h2>Exercise 1</h2>
-<ul>
-<li>Draw a stick man as shown in the picture below:</li>
-</ul>
-<p><img src="./img/25.png" alt="Basic Stick Man"></p>
-<h2>Exercise 2</h2>
-<ul>
-<li>Replicate the basic Microsoft logo as shown in the picture below:</li>
-</ul>
-<p><img src="./img/26.png" alt="Basic Microsoft Logo"></p>
-<ul>
-<li>Hint:  You could use <a href="http://designpieces.com/2014/11/brand-colours/">this website</a> to find the exact Microsoft RGB colours in their logo.</li>
-</ul>
-<h2>Exercise 3</h2>
-<ul>
-<li>Replicate the beats (Dr. Dre) logo as shown in the picture below:</li>
-</ul>
-<p><img src="./img/27.png" alt="Dr. Dre logo"></p>
-<h2>Challenge Exercise 1</h2>
-<ul>
-<li>Convert the Microsoft logo into a grayscale logo as shown in the picture below:</li>
-</ul>
-<p><img src="./img/28.png" alt="Greyscale version of the Microsoft logo"></p>
-<ul>
-<li>Hint: the easiest way to do this is to use the grayscale <strong>fill</strong> function as opposed to the RBG version of it.  The grayscale version of <strong>fill</strong> takes one parameter, a number between 0 and 255 inclusive.  This numver represents a shade of gray between black (0) and white (255) e.g.:</li>
-</ul>
-<pre><code>    fill(150);   //sets a medium gray colour for all shapes drawn after it
-    fill(0);     //sets a black colour for all shapes drawn after it
-    fill(255);   //sets a white colour for all shapes drawn after it</code></pre>
-<h2>Challenge Exercise 2</h2>
-<ul>
-<li>Write the code that will draw the typical control buttons you would see on a DVD player.  An example image would be:</li>
-</ul>
-<p><img src="./img/29.png" alt="DVD player controls"></p>
-<ul>
-<li>Hint: you will need to read up on the triangle() function on the <a href="https://processing.org/reference/triangle_.html">Processing website</a>.</li>
-</ul>
-<h2>Challenge Exercise 3</h2>
-<ul>
-<li>Draw any picture you fancy as your profile picture for social media.  No need to actually change your profile picture, just play around with drawing one!</li>
-</ul>
+
+--------------------------------------------------
+-- The formula for the area of a circle is 
+-- pie times r squared, where r is the radius of 
+-- the circle. Define a Double which is the area 
+-- in square centimeters of a circle with diameter 
+-- 10 centimeters.
+
+areaCircleDiameter10:: Double
+areaCircleDiameter10 = undefined
+
+
+----------------------------------------------
+-- Define an Integer that is the number of 
+-- seconds in a week.
+
+secondsIn1Week:: Integer
+secondsIn1Week = undefined
+
+
+---------------------------------------------
+-- Define a List of Integers with the elements
+-- 1 to 10 in increasing order
+
+oneToTen:: [Integer]
+oneToTen = undefined
+
+
+---------------------------------------------
+-- Define a string that is your first name
+
+yourFirstName:: String
+yourFirstName = undefined
+
+
+---------------------------------------------
+-- Define an Integer that is your age
+
+yourAge:: Integer     
+yourAge = undefined
+
+
+---------------------------------------------
+-- Define a Bool truthvalue that is 
+-- (yourAge is greater than 19) or (yourFirstName is &quot;Tim&quot;)
+
+compareName:: Bool
+compareName = undefined
+
+
+---------------------------------------------
+-- Define an Double that is the average of 
+-- 3.0, 7.42, and 24.8
+
+average:: Double
+average = undefined
+
+
+---------------------------------------------
+-- Define an Integer that is the remainder
+-- when 14563 is divided by 22. Hint use the 
+-- &quot;mod&quot; operator. Try it out to see how it works
+
+remainder::Integer 
+remainder = undefined
+
+
+---------------------------------------------
+-- Define a tuple that has your first name 
+-- and your age.
+
+tuple:: (String,Integer)
+tuple = undefined
+
+
+---------------------------------------------
+-- Compute the difference between your
+-- approximation of pie, and the fraction
+-- 22 divided by 7.
+
+difference:: Double
+difference = undefined</code></pre>
 
       </div>
      
